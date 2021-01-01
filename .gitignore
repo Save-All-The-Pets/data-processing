@@ -2,9 +2,18 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.envrc
+.DS_Store
 
 # C extensions
 *.so
+.vscode/
+
+# datbase file
+*.bak
+
+# ignore csv files
+*.csv
 
 # Distribution / packaging
 .Python
