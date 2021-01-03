@@ -13,6 +13,7 @@ Repo for data processing code.
 ## Suggested Tools
 
 * [direnv](https://direnv.net/) is a great tool for managing virtual environments via the command line.  When you set up a `.envrc` file, when you `cd` into that directory, it will automatically execute which can be helpful in loading environment variables as well as loading a python environment.
+* [cyberduck](https://cyberduck.io/) is a good GUI utility for accessing files from SFTP and BLOB storage services like AWS S3.
 * [python venv](https://docs.python.org/3/tutorial/venv.html) is a light-weight virtual enviroment tool supported directly within python.
 * [VS Code](https://code.visualstudio.com/) is a useful text editor that comes with an extensive list of extensions that allow it to support python development, data science, and data engineering.
   * [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/python/jupyter-support) Supports running jupyer notebooks directly in VS Code.
