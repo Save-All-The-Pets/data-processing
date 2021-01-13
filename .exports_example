@@ -1,4 +1,2 @@
-export ftp_server=
-export user=
-export password=
 export save_all_the_pets_db=postgresql://[username]:[password]@[host]:5432/save_all_the_pets
+export PGPASSWORD=[satp_admin_password]
