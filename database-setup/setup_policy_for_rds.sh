@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# requires admin rights
+
 aws iam create-policy \
    --policy-name rds-s3-import-policy \
    --policy-document '{
