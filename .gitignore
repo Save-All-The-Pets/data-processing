@@ -12,6 +12,10 @@ __pycache__/
 # datbase file
 *.bak
 
+# gzip file
+
+*.gz
+
 # ignore csv files
 *.csv
 
