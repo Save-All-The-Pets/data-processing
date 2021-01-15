@@ -7,7 +7,7 @@ Repo for data processing code.
 * Create a `.exports` file that you source into a `.bashrc` or `.zshrc` file.  This will allow securely managing all project related secrets locally as well as support reproducibility.
 * Install docker - see here for instructions [docker setup](https://docs.docker.com/get-docker/)
 * Install [mssql-tools](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-ver15)
-* Install Python `3.9.*`.  Suggest using `pyenv`, see below for suggested set up.
+* Install Python `3.8.5`.  Suggest using `pyenv`, see below for suggested set up.  Chose 3.8.5 for data-build-tool compatibility.
 * Set up Python environment using [setup_venv.sh](setup_venv.sh)
 
 ## Suggested Tools
