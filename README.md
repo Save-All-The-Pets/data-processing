@@ -24,4 +24,4 @@ Repo for data processing code.
         if command -v pyenv 1>/dev/null 2>&1; then
             eval "$(pyenv init -)"
         fi
-* [homebrew](https://brew.sh/) is a greater method for installing and managing packages and applications on MacOS, Linux, or Windows Subsystem for Linux.
+* [homebrew](https://brew.sh/) is a great method for installing and managing packages and applications on MacOS, Linux, or Windows Subsystem for Linux.
