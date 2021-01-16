@@ -21,7 +21,7 @@ function python_install() {
 # requirements.txt was set up with python 3.9
 # and it is recommended that it is used when setting
 # up environment
-if [[ python_major -eq 3 && python_minor -eq 9 ]] 
+if [[ python_major -eq 3 && python_minor -eq 8 ]] 
 then
     echo "On Python 3.9 and good to install"
     python_install
