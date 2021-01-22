@@ -13,6 +13,7 @@ Repo for data processing code.
 ## Suggested Tools
 
 * [erd](https://github.com/BurntSushi/erd) is a command line utility for rendering Entity Relationship Diagrams from a markdown file.  This has an added benefit of being able to source control ERD diagrams.
+  * [ER Syntax Highlighitng](https://marketplace.visualstudio.com/items?itemName=mikkel-ol.er-syntax-highlighting) is a useful VS Code addon that supports syntax highlighting for *.er files.
 * [direnv](https://direnv.net/) is a great tool for managing virtual environments via the command line.  When you set up a `.envrc` file, when you `cd` into that directory, it will automatically execute which can be helpful in loading environment variables as well as loading a python environment.
 * [cyberduck](https://cyberduck.io/) is a good GUI utility for accessing files from SFTP and BLOB storage services like AWS S3.
 * [python venv](https://docs.python.org/3/tutorial/venv.html) is a light-weight virtual enviroment tool supported directly within python.
