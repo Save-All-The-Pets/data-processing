@@ -1,0 +1,38 @@
+[pet_transfer_event] {bgcolor: "#d0e0d0"}
+    *+transfer_id {label: "pk, unique id, not null"}
+    *pet_id {label: "fk, unique id, not null"}
+    *location_id {label: "fk, unique id, not null"}
+    intake_date {label: "date, not null"}
+    intake_type {label: "varchar, not null"}
+    outcome_date {label: "date, null"}
+    outcome_type {label: "varchar, null"}
+
+[pet] {bgcolor: "#ececfc"}
+  *+pet_id {label: "pk, unique id, not null"}
+  species {label: "varchar, null"}
+  breed {label: "varchar, null"}
+  size {label: "varchar, null"}
+  s_n_status {label: "varchar, null"}
+  birthdate {label: "date, null"}
+  age_group {label: "varchar, null"}
+  sex_gender {label: "varchar, null"}
+  photo_1_url {label: "varchar, null"}
+  photo_2_url {label: "varchar, null"}
+  photo_3_url {label: "varchar, null"}
+  video_link_url {label: "varchar, null"}
+  bite_status {label: "varchar, null"}
+  asilomar_status {label: "varchar, null"}
+  primary_color {label: "varchar, null"}
+  secondary_color {label: "varchar, null"}
+  inferred_breed {label: "varchar, null"}
+  inferred_fur_type {label: "varchar, null"}
+  inferred_color {label: "varchar, null"}
+
+[location] {bgcolor: "#fcecec"}
+  *+location_id {label: "pk, unique id, not null"}
+  shelter_zipcode {label: "varchar, null"}
+  zipcode_location_of_origin {label: "varchar, null"}
+  zipcode_location_of_finder {label: "varchar, null"}
+
+pet_transfer_event    *--1 pet
+pet_transfer_event    *--1 location
