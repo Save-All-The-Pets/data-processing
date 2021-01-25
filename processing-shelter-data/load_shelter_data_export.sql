@@ -39,3 +39,7 @@ SELECT aws_s3.table_import_from_s3(
 drop table if exists shelter_data.shelter_data_export;
 
 alter table shelter_data_export set schema shelter_data;
+
+grant usage on schema shelter_data to group data_users;
+
+grant select on all tables in schema shelter_data to group data_users;
