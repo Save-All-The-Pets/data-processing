@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: shelter_data
+    database: 
+    schema: shelter_data
+
+    tables:
+      - name: shelter_data_export
+        description: Data sourced from shelters
