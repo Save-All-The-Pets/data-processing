@@ -19,7 +19,7 @@ Repo for data processing code.
 * [python venv](https://docs.python.org/3/tutorial/venv.html) is a light-weight virtual enviroment tool supported directly within python.
 * [VS Code](https://code.visualstudio.com/) is a useful text editor that comes with an extensive list of extensions that allow it to support python development, data science, and data engineering.
   * [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/python/jupyter-support) Supports running jupyer notebooks directly in VS Code.
-* [pyenv](https://github.com/pyenv/pyenv) is a utility that supports installing and managing multipel versions of python.  To use this, you will need to first add the following to your `.zshrc` or `.bashrc` file.  You can then run [setup_python.sh](setup_python.sh) to install python `3.9.0`.
+* [pyenv](https://github.com/pyenv/pyenv) is a utility that supports installing and managing multipel versions of python.  To use this, you will need to first add the following to your `.zshrc` or `.bashrc` file.  You can then run [setup_python.sh](setup_python.sh) to install python `3.8.5`.
 
         export PYENV_ROOT="$HOME/.pyenv"
         export PATH="$PYENV_ROOT/bin:$PATH"

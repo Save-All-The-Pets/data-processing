@@ -8,3 +8,5 @@ sources:
     tables:
       - name: shelter_data_export
         description: Data sourced from shelters
+      - name: zipcode_data
+        description: Data pulled from USPS https://www.unitedstateszipcodes.org/zip-code-database/
