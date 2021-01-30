@@ -9,6 +9,8 @@ Repo for data processing code.
 * Install [mssql-tools](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-ver15)
 * Install Python `3.8.5`.  Suggest using `pyenv`, see below for suggested set up.  Chose 3.8.5 for data-build-tool compatibility.
 * Set up Python environment using [setup_venv.sh](setup_venv.sh)
+* To run dbt, you need to add it to your `~/.dbt/profiles.yml`
+  * Replace host, userame, and password with your values (do not include the brakcets)
 
 ## Suggested Tools
 
