@@ -16,14 +16,17 @@ alter group data_users add user michael;
 alter group data_users add user ross;
 alter group data_users add user ned;
 
-grant usage on schema shelter_data to data_users;
-grant all on all tables in schema shelter_data to data_users;
+grant usage on schema shelter_data to group data_users;
+grant all on all tables in schema shelter_data to group data_users;
+grant create on schema shelter_data to group data_users;
 
-grant usage on schema shelter_data_dev to data_users;
-grant all on all tables in schema shelter_data_dev to data_users;
+grant usage on schema shelter_data_dev to group data_users;
+grant all on all tables in schema shelter_data_dev to group data_users;
+grant create on schema shelter_data_dev to group data_users;
 
-grant usage on schema shelter_data_prod to data_users;
-grant all on all tables in schema shelter_data_prod to data_users;
+grant usage on schema shelter_data_prod to group data_users;
+grant all on all tables in schema shelter_data_prod to group data_users;
+grant create on schema shelter_data_dev to group data_users;
 
 grant create on database save_all_the_pets to group data_users;
 
