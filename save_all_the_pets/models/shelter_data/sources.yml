@@ -10,3 +10,5 @@ sources:
         description: Data sourced from shelters
       - name: zipcode_data
         description: Data pulled from USPS https://www.unitedstateszipcodes.org/zip-code-database/
+      - name: shelter_photos
+        description: Incrementally loaded photo url table
