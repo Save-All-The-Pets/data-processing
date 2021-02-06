@@ -11,7 +11,7 @@ dsn = os.environ["save_all_the_pets_db"]
 
 sql = """
 select *
-from shelter_data.shelter_data_export
+from shelter_data_prod.shelter_data
 limit 10
 """
 
