@@ -35,3 +35,7 @@ models:
     save_all_the_pets:
         shelter_data:
             materialized: table
+
+on-run-end:
+    - 'grant usage on schema {{ target.schema }} to group data_users'
+    - 'grant all on all tables in schema {{ target.schema }} to group data_users'
