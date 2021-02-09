@@ -22,8 +22,8 @@ renamed AS (
         breed,
         SIZE,
         weight,
-        -- {{ get_weight_value('weight') }} AS weight_value,
-        -- {{ get_weight_unit('weight') }} AS weight_unit,
+        {{ get_weight_value('weight') }} AS weight_value,
+        {{ get_weight_unit('weight') }} AS weight_unit,
         s_n_status,
         birthdate :: DATE AS birthdate,
         age_group,
@@ -56,7 +56,7 @@ renamed AS (
         ON source.shelter_zipcode = zipcode_data.zip
 )
 SELECT
-    *--,
-    -- {{ calc_pound('weight_value', 'weight_unit') }} as weight_in_pounds
+    *,
+    {{ calc_pound('weight_value', 'weight_unit') }} as weight_in_pounds
 FROM
     renamed
