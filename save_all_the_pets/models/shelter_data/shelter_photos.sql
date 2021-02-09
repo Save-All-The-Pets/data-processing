@@ -45,24 +45,13 @@ WITH base AS (
         photo_3 notnull
 )
 SELECT
-    *
+    base.*
 FROM
     base
 
 {% if is_incremental() %}
+LEFT JOIN {{ this }} AS th
+ON base.photo_id = th.photo_id
 WHERE
-    photo_id NOT IN (
-        SELECT
-            photo_id
-        FROM
-            {{ this }}
-    )
+    th.photo_id IS NULL
 {% endif %}
-
-{{
-config({
-    "post-hook": [
-      "{{ postgres_utils.index(this, 'photo_id')}}",
-    ],
-    })
-}}
