@@ -1,12 +1,22 @@
 {% macro get_weight_unit(column_name) %}
-    (regexp_matches({{ column_name }}, '[a-zA-Z]+')) [1]
+    SUBSTRING(
+        {{ column_name }}
+        FROM
+            '[a-zA-Z]+'
+    )
 {% endmacro %}
 
 {% macro get_weight_value(column_name) %}
     SUBSTRING(
         {{ column_name }},
         1,
-        POSITION((regexp_matches({{ column_name }}, '[a-zA-Z]+')) [1] IN {{ column_name }}) -1
+        POSITION(
+            SUBSTRING(
+                {{ column_name }}
+                FROM
+                    '[a-zA-Z]+'
+            ) IN {{ column_name }}
+        ) -1
     ) :: DECIMAL(
         18,
         2
@@ -23,5 +33,6 @@
         WHEN {{ weight_unit }} LIKE 'ounce' THEN {{ weight_value }} / 0.06249992566875
         WHEN {{ weight_unit }} LIKE 'ton' THEN NULL
         WHEN {{ weight_unit }} LIKE 'gram' THEN {{ weight_value }} / 0.00220462
+        ELSE NULL
     END
 {% endmacro %}
