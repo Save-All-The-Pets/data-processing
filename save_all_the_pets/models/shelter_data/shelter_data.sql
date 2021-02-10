@@ -54,9 +54,19 @@ renamed AS (
         source
         LEFT JOIN zipcode_data
         ON source.shelter_zipcode = zipcode_data.zip
+),
+calc_weight_in_pounds AS (
+    SELECT
+        *,
+        {{ calc_pound(
+            'weight_value',
+            'weight_unit'
+        ) }} AS weight_in_pounds
+    FROM
+        renamed
 )
 SELECT
     *,
-    {{ calc_pound('weight_value', 'weight_unit') }} as weight_in_pounds
+    {{ weight_bucket('weight_in_pounds') }} AS weight_bucket
 FROM
-    renamed
+    calc_weight_in_pounds
