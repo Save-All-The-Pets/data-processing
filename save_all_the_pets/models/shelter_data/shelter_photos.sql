@@ -3,8 +3,7 @@ WITH base AS (
         {{ dbt_utils.surrogate_key(['photo_1']) }} :: VARCHAR(32) AS photo_id,
         species,
         1 AS photo_position,
-        photo_1 AS photo_url,
-        NULL AS url_type
+        photo_1 AS photo_url
     FROM
         {{ ref(
             'shelter_data'
