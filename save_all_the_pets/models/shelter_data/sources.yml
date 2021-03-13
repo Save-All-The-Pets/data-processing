@@ -11,9 +11,11 @@ sources:
       - name: zipcode_data
         description: Data pulled from USPS https://www.unitedstateszipcodes.org/zip-code-database/
       - name: shelter_photos
-        description: Incrementally loaded photo url table
+        description: Shelter photo table
         columns:
           - name: photo_id
             tests:
               - unique
               - not_null
+      - name: model_inference
+        description: photos inferences
